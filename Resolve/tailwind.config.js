@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        
+
+      },
+      fontFamily: {
+        body: ['Playfair Display']
       }
     },
   },
