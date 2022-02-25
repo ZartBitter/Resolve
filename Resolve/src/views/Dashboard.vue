@@ -1,9 +1,9 @@
+<script setup>
+import Dashboard from '@/components/Dashboard.vue'
+</script>
+
 <template>
-
-    <h1>This will be someday the Dashboard Page</h1>
-
+  <main>
+      <Dashboard></Dashboard>
+  </main>
 </template>
-
-<style>
-
-</style>
