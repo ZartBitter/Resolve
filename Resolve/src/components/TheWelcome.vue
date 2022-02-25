@@ -9,9 +9,17 @@ import HomepageRoad1 from './icons/HomepageRoad.vue';
 <template>
  
     <!-- Upper Section of the Hompage -->
-    <section class=" flex items-center justify-between">
-      <HomepageRoad class="max-w-xs"></HomepageRoad>
-      <HomepageThoughts class="max-w-xs max-h-56"></HomepageThoughts>
+    <section class="flex items-center justify-between">
+
+          <div class="bg-gradient-to-br from-white/70 to-white/10 rounded-full h-96 w-96 flex items-center">
+            <HomepageRoad class="max-w-xs ml-8"></HomepageRoad>
+          </div>
+
+          <div class="bg-gradient-to-br from-white/70 to-white/10 rounded-full h-80 w-80 flex items-center">
+              <HomepageThoughts class="max-w-xs max-h-56 z-10"></HomepageThoughts>
+          </div>
+
+
     </section>
 
     <!-- Login Card -->
