@@ -36,8 +36,13 @@ import HomepageRoad1 from './icons/HomepageRoad.vue';
 
     <!-- Lower Section of the Homepage -->
     <section class=" flex items-center justify-between">
-      <HomepageBuilding></HomepageBuilding>
-      <HomepageSuccess></HomepageSuccess>
+        <div class="bg-gradient-to-br from-white/70 to-white/10 rounded-full h-96 w-96 flex items-center">
+          <HomepageBuilding class="max-w-xs max-h-56 z-10 ml-10"></HomepageBuilding>
+        </div>
+
+        <div class="bg-gradient-to-br from-white/70 to-white/10 rounded-full h-96 w-96 flex items-center">
+          <HomepageSuccess class="max-w-xs max-h-56 z-10 ml-8"></HomepageSuccess>
+        </div>
     </section>
 
   
