@@ -35,7 +35,7 @@ import HomepageRoad1 from './icons/HomepageRoad.vue';
     </section>
 
     <!-- Lower Section of the Homepage -->
-    <section class=" flex flex-col items-center md:flex-row md:justify-between mt-4 lg:mt-0">
+    <section class="flex flex-col items-center md:flex-row md:justify-between mt-4 lg:mt-0">
         <div class="bg-gradient-to-br from-white/70 to-white/10 rounded-full lg:h-96 lg:w-96 h-44 w-44 flex items-center">
           <HomepageBuilding class="max-w-xs max-h-56 z-10 lg:ml-10 ml-5"></HomepageBuilding>
         </div>
@@ -44,8 +44,6 @@ import HomepageRoad1 from './icons/HomepageRoad.vue';
           <HomepageSuccess class="max-w-lg lg:max-h-80 max-h-20 z-10 ml-2 lg:ml-8"></HomepageSuccess>
         </div>
     </section>
-
-  
 
 
 </template>

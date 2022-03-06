@@ -8,8 +8,8 @@
     
     <!-- Dashboard-UI -->
     <section class="h-screen flex justify-center items-center">
-        <div class="bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-xl h-4/5 w-9/12 rounded-3xl z-50">
-        <button class="rounded-full p-1 pl-4 pr-4 bg-white opacity-90 font-body font-bold text-sky-600 hover:text-blue-800"><RouterLink to="/Smart">SMART</RouterLink></button>
+        <div class="bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-xl h-4/5 w-10/12 rounded-3xl z-50">
+        <button class="rounded-full p-10 bg-white/90 font-body font-bold text-sky-600 hover:text-blue-800">S</button>
         </div>
     </section>
     <!-- Circle -->

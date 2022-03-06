@@ -14,6 +14,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">Home</RouterLink>
         <br>
         <RouterLink to="/Dashboard">Dashboard</RouterLink>
+        <br>
+        <RouterLink to="/Smart">SMART</RouterLink>
       </nav>
   </header>
 
