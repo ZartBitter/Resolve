@@ -1,17 +1,27 @@
 <template>
-    <h1>This will be someday the Dashboard Page</h1>
-    <!-- Circle's -->
-    <div class="bg-gradient-to-br from-white/90 to-white/10 rounded-full h-96 w-96 absolute right-12 -top-1/4">
+  <h1>This will be someday the Dashboard Page</h1>
+  <!-- Circle's -->
+  <div
+    class="absolute right-12 -top-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-white/90 to-white/10"
+  ></div>
+  <div
+    class="absolute right-20 bottom-1/4 h-2/4 w-1/4 rounded-full bg-gradient-to-br from-white/90 to-white/10"
+  ></div>
+
+  <!-- Dashboard-UI -->
+  <section class="flex h-screen items-center justify-center">
+    <div
+      class="z-50 h-4/5 w-10/12 rounded-3xl bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-xl"
+    >
+      <button
+        class="rounded-full bg-white/90 p-10 font-body font-bold text-sky-600 hover:text-blue-800"
+      >
+        S
+      </button>
     </div>
-    <div class="bg-gradient-to-br from-white/90 to-white/10 rounded-full h-2/4 w-1/4 absolute right-20 bottom-1/4">
-    </div>
-    
-    <!-- Dashboard-UI -->
-    <section class="h-screen flex justify-center items-center">
-        <div class="bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-xl h-4/5 w-10/12 rounded-3xl z-50">
-        <button class="rounded-full p-10 bg-white/90 font-body font-bold text-sky-600 hover:text-blue-800">S</button>
-        </div>
-    </section>
-    <!-- Circle -->
-    <div class="bg-gradient-to-br from-white/90 to-white/10 h-2/4 w-1/4 rounded-full absolute bottom-0 left-20"></div>
+  </section>
+  <!-- Circle -->
+  <div
+    class="absolute bottom-0 left-20 h-2/4 w-1/4 rounded-full bg-gradient-to-br from-white/90 to-white/10"
+  ></div>
 </template>
