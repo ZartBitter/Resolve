@@ -1,6 +1,6 @@
 <script setup>
 import Modal from "./Modal.vue";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const showModal = ref(false);
 const email = ref("");
@@ -16,9 +16,9 @@ const register = () => {};
   >
     REGISTRIEREN
   </button>
-  <Teleport to="body" class="overflow-hidden">
+  <Teleport to="body">
     <!-- use the modal component, pass in the prop -->
-    <modal :show="showModal" @close="showModal = false" @wheel.prevent @touchmove.prevent @scroll.prevent class="overflow-clip">
+    <modal :show="showModal" @close="showModal = false">
       <template #header>
         <h3 class="font-body text-2xl font-extrabold text-sky-600/90">REGISTRIEREN</h3>
       </template>

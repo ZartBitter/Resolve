@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <Transition name="modal">
+  <Transition name="modal" @wheel.prevent @touchmove.prevent @scroll.prevent>
     <div v-if="show" class="fixed top-0 left-0 z-50 table h-full w-full bg-sky-400/50 transition-opacity duration-300 ease-linear">
       <div class="table-cell align-middle">
         <div class="mx-auto w-1/4 rounded-3xl bg-white px-5 py-9 shadow-md shadow-sky-400/50 transition-all duration-300 ease-out">

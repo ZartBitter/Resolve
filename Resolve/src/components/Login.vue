@@ -16,7 +16,7 @@ const showModal = ref(false);
   </button>
   <Teleport to="body">
     <!-- use the modal component, pass in the prop -->
-    <modal :show="showModal" @close="showModal = false" @wheel.prevent @touchmove.prevent @scroll.prevent>
+    <modal :show="showModal" @close="showModal = false">
       <template #header>
         <h3>ANMELDEN</h3>
       </template>
