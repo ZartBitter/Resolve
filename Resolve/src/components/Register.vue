@@ -1,11 +1,37 @@
 <script setup>
 import Modal from "./Modal.vue";
-import { ref, watch } from "vue";
+import { ref } from "vue";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const showModal = ref(false);
 const email = ref("");
 const password = ref("");
-const register = () => {};
+
+const register = () => {
+  createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+    .then((data) => {
+      console.log("Successfuyll registered");
+      router.push("/dashboard");
+    })
+    .catch((error) => {
+      console.log(error.code);
+      alert(error.message);
+    });
+};
+const signInWithGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user);
+      router.push("/dashboard");
+    })
+    .catch((error) => {
+      console.log(error.code);
+      alert(error.message);
+    });
+};
 </script>
 
 <template>
@@ -27,6 +53,7 @@ const register = () => {};
         <p><input type="text" placeholder="Email" v-model="email" /></p>
         <p><input type="password" placeholder="Password" v-model="password" /></p>
         <p><button @click="register">Registrieren</button></p>
+        <p><button @click="signInWithGoogle">Mit Google Account Registrieren</button></p>
       </template>
     </modal>
   </Teleport>
