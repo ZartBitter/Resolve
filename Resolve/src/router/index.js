@@ -27,6 +27,9 @@ const router = createRouter({
       path: "/smart",
       name: "smart",
       component: () => import("../views/Smart.vue"),
+      meta: {
+        requiresAuth: true,
+      },
     },
   ],
 });
@@ -49,7 +52,7 @@ router.beforeEach(async (to, from, next) => {
     if (await getCurrentUser()) {
       next();
     } else {
-      alert("you dont have access!");
+      alert("Du hast keinen Zugriff! Melde dich zuerst an oder registriere dich.");
       next("/");
     }
   } else {

@@ -13,6 +13,7 @@ const register = () => {
   createUserWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) => {
       console.log("Successfuyll registered");
+      alert("Erfolgreich registriert");
       router.push("/dashboard");
     })
     .catch((error) => {
@@ -25,6 +26,7 @@ const signInWithGoogle = () => {
   signInWithPopup(getAuth(), provider)
     .then((result) => {
       console.log(result.user);
+      alert("Erfolgreich registriert");
       router.push("/dashboard");
     })
     .catch((error) => {
@@ -46,14 +48,63 @@ const signInWithGoogle = () => {
     <!-- use the modal component, pass in the prop -->
     <modal :show="showModal" @close="showModal = false">
       <template #header>
-        <h3 class="font-body text-2xl font-extrabold text-sky-600/90">REGISTRIEREN</h3>
+        <h1 class="font-body text-2xl font-extrabold text-sky-600/90">REGISTRIEREN</h1>
       </template>
       <template #body>
-        <h1>Create an Account</h1>
-        <p><input type="text" placeholder="Email" v-model="email" /></p>
-        <p><input type="password" placeholder="Password" v-model="password" /></p>
-        <p><button @click="register">Registrieren</button></p>
-        <p><button @click="signInWithGoogle">Mit Google Account Registrieren</button></p>
+        <h3 class="font-body text-lg font-bold text-sky-500/90">Account erstellen</h3>
+        <p>
+          <label for="email" class="mt-2 mb-1 block text-sm font-medium text-gray-700">Email Adresse</label>
+          <input
+            required
+            id="email"
+            name="email"
+            type="text"
+            placeholder="Email"
+            v-model="email"
+            class="w-full rounded-lg border-2 border-sky-300 px-3 py-2 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          />
+        </p>
+        <p>
+          <label for="password" class="mt-1 mb-1 block text-sm font-medium text-gray-700">Passwort</label>
+          <input
+            id="password"
+            required
+            name="password"
+            type="password"
+            placeholder="Passwort"
+            v-model="password"
+            class="w-full rounded-lg border-2 border-sky-300 px-3 py-2 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          />
+        </p>
+        <div class="mt-3 flex items-center">
+          <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox" required class="h-4 w-4 border-gray-300 focus:ring-purple-600" />
+          <label for="terms-and-privacy" class="ml-2 text-sm text-gray-900">
+            I agree to the
+            <a href="#" class="font-medium text-indigo-400 hover:font-bold hover:text-indigo-500">Terms</a>
+            and
+            <a href="#" class="font-medium text-indigo-400 hover:font-bold hover:text-indigo-500">Privacy Policy</a>
+          </label>
+        </div>
+        <div class="flex justify-center">
+          <p>
+            <button
+              @click="signInWithGoogle"
+              class="mt-1 transform rounded-full bg-sky-600 p-1 px-4 font-body font-bold text-white duration-300 hover:scale-110 hover:text-slate-100"
+            >
+              Mit Google Account Registrieren
+            </button>
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <p>
+            <button
+              @click="register"
+              class="mt-1 transform rounded-full bg-sky-600 p-1 px-4 font-body font-bold text-white duration-300 hover:scale-110 hover:text-slate-100"
+            >
+              Registrieren
+            </button>
+          </p>
+        </div>
       </template>
     </modal>
   </Teleport>

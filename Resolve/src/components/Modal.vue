@@ -19,7 +19,6 @@ const props = defineProps({
 
           <div class="modal-footer">
             <slot name="footer">
-              default footer
               <button class="float-right" @click="$emit('close')">OK</button>
             </slot>
           </div>

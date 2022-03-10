@@ -31,6 +31,7 @@ const handleSignOut = () => {
   <div
     class="absolute bottom-1/3 right-0 -z-10 h-64 w-64 rounded-full bg-gradient-to-tr from-blue-600 to-green-100 blur-3xl lg:bottom-0 lg:h-4/5 lg:w-2/5"
   ></div>
+  <!-- Navigation will be removed later on, except of signOut -->
   <header class="font-serif">
     <img alt="Vue logo" class="logo brightness-110" src="@/assets/Resolve.svg" width="125" height="125" />
     <nav>

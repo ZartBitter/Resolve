@@ -15,7 +15,8 @@ const register = () => {
   const auth = getAuth();
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then((data) => {
-      console.log("Successfuyll registered");
+      console.log("Successfully loggedin");
+      alert("Erfolgreich angemeldet");
       router.push("/dashboard");
     })
     .catch((error) => {
@@ -58,8 +59,7 @@ const register = () => {
         <p><input type="text" placeholder="Email" v-model="email" /></p>
         <p><input type="password" placeholder="Password" v-model="password" /></p>
         <p v-if="errMsg">{{ errMsg }}</p>
-        <p><button @click="register">Registrieren</button></p>
-        <p><button @click="signInWithGoogle">Mit Google Account Registrieren</button></p>
+        <p><button @click="register">Anmelden</button></p>
       </template>
     </modal>
   </Teleport>
