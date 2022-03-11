@@ -115,15 +115,4 @@ const signInWithGoogle = () => {
   </Teleport>
 </template>
 
-<style>
-/* Hide scrollbar for Chrome, Safari and Opera */
-.container-snap::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.container-snap {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-</style>
+<style></style>
