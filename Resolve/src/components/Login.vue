@@ -87,7 +87,7 @@ const register = () => {
           />
         </p>
 
-        <!-- Error message, in case of wrong incorrect entries -->
+        <!-- Error message, in case of incorrect entries -->
         <p v-if="errMsg" class="mt-2 font-body font-bold text-red-700">{{ errMsg }}</p>
 
         <div class="flex justify-center">
